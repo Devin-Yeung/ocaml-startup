@@ -7,4 +7,5 @@
 
 (* Define your own operator *)
 let ( <^> ) x y = max x y ;;
-1 <^> 2 ;;
+
+let%test _ = 1 <^> 2 = 2 ;;
