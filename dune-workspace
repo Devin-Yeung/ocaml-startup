@@ -1,0 +1,8 @@
+(lang dune 3.4)
+
+(env
+ (dev
+  ; treat warnings 27 (unused-var-strict) and 32 (unused-value-declaration) as warning
+  ; See https://dune.readthedocs.io/en/stable/faq.html#how-to-turn-specific-errors-into-warnings
+  (flags :standard -warn-error -27-32) ;Turn Specific Errors into Warnings
+  ))
