@@ -28,6 +28,11 @@ let empty lst =
   | [] -> true
   | h(*head*) :: t(*tail*) -> false
 
+(* rewritten in function key word *)
+let empty lst = function
+  | [] -> true
+  | h(*head*) :: t(*tail*) -> false
+
 let rec sum lst =
   match lst with
   | [] -> 0
