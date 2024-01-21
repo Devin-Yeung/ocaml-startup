@@ -3,7 +3,7 @@
 let (@@) f x = f x;;
 
 (* Reverse Application a.k.a pipeline *)
-let (|>) x f = f x;
+let (|>) x f = f x;;
 
 succ 2 * 10;;
 (* which is equiv to *)
@@ -16,8 +16,10 @@ let square x = x * x;;
 (* calculate ((5 + 1)^2)^2 + 1 *)
 succ ( square ( square (succ 5) ) );;
 (* uh.. ugly! using pipeline! *)
-5
+
+let%test _ = 5
 |> succ
 |> square
 |> square
-|> succ ;; (* beautiful! *)
+|> succ 
+= 1297;; (*beautiful!*)
