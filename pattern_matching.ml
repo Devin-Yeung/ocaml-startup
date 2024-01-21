@@ -20,18 +20,20 @@ let a =
 let b =
   match ["taylor"; "swift"] with
   | [] -> "folklore"
-  | h :: t -> h
+  | h :: _ -> h
 
 (* check if list is empty *)
 let empty lst =
   match lst with
   | [] -> true
-  | h(*head*) :: t(*tail*) -> false
+  | _(*head*) :: _(*tail*) -> false
 
 (* rewritten in function key word *)
-let empty lst = function
+let empty = function
   | [] -> true
-  | h(*head*) :: t(*tail*) -> false
+  | _(*head*) :: _(*tail*) -> false
+
+let%test _ = empty [] = true;;
 
 let rec sum lst =
   match lst with
@@ -42,7 +44,7 @@ let rec sum lst =
 let rec length lst =
   match lst with
   | [] -> 0
-  | h :: t -> 1 + length t
+  | _ :: t -> 1 + length t
 
 
 (* example useage:
