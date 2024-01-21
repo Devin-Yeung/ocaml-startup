@@ -25,9 +25,7 @@ let avg a b = (a +. b) /. 2.
 let center s =
   match s with
   | Circle { center; _ } -> center
-  | Rectangle { lower_left; upper_right } ->
-    let x_ll, y_ll = lower_left in
-    let x_ur, y_ur = upper_right in
+  | Rectangle { lower_left = x_ll, y_ll; upper_right = x_ur, y_ur } ->
     avg x_ll x_ur, avg y_ll y_ur
 ;;
 
