@@ -1,4 +1,13 @@
-module MyStack = struct
+module type ListStackSig = sig
+  type 'a stack
+
+  val empty : 'a stack
+  val push : 'a -> 'a stack -> 'a stack
+  val peek : 'a stack -> 'a option
+  val pop : 'a stack -> 'a stack
+end
+
+module MyStack : ListStackSig = struct
   type 'a stack =
     | Empty
     | Entry of 'a * 'a stack
@@ -18,7 +27,7 @@ module MyStack = struct
   ;;
 end
 
-module ListStack = struct
+module ListStack : ListStackSig = struct
   type 'a stack = 'a list
 
   let empty = []
