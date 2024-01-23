@@ -1,3 +1,4 @@
+(* Name must be capitalized, idiomatically in CamelCase *)
 module MyList = struct
   type 'a mylist =
     | Nil

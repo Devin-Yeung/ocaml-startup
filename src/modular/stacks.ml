@@ -35,3 +35,11 @@ module ListStack = struct
     | _ :: s -> s
   ;;
 end
+
+let x = ListStack.(empty |> push 42 |> peek)
+
+(* Local Open *)
+let w =
+  let open ListStack in
+  empty |> push 42 |> peek
+;;
