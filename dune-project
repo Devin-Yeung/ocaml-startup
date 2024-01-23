@@ -1,5 +1,7 @@
 (lang dune 3.4)
 
+(generate_opam_files true)
+
 (package
  (name ocaml-startup)
  (depends
