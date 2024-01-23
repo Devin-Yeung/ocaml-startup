@@ -17,4 +17,4 @@ let rec list_max (lst : 'a list) : 'a option =
 ;;
 
 let%test _ = list_max [] = None
-let%test _ = list_max [1; 2; 3] = Some 3
+let%test _ = list_max [ 1; 2; 3 ] = Some 3
