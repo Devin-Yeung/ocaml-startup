@@ -16,7 +16,7 @@ jobs:
           - windows-latest
         ocaml-compiler:
           - "4.14"
-          - "4.08"
+          - "5.20"
 
     runs-on: ${{ matrix.os }}
 
@@ -37,7 +37,6 @@ jobs:
 
       - name: Test
         run: opam exec -- dune runtest
-
 
   lint-doc:
     runs-on: ubuntu-latest
