@@ -1,12 +1,12 @@
 (* Algebraic Data Types *)
 
 (*
-  Records and Tuples: *each-of* types
-  - Aka *product* types
+   Records and Tuples: *each-of* types
+   - Aka *product* types
 
-  Variants: *one-of* types
-  - Aka *sum* types
-  - Aka tagged union
+   Variants: *one-of* types
+   - Aka *sum* types
+   - Aka tagged union
 *)
 
 type string_or_int =

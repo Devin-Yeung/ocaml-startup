@@ -18,10 +18,10 @@ module ListQueue = struct
 end
 
 module TwoListQueue = struct
-  (* 
-    fornt = [a; b]; back = [e; d; c]
-    represents the queue a, b, c, d, e
-    If [front] is empty then [back] must be empty,
+  (*
+     fornt = [a; b]; back = [e; d; c]
+     represents the queue a, b, c, d, e
+     If [front] is empty then [back] must be empty,
   *)
   type 'a queue =
     { front : 'a list
