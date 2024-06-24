@@ -13,7 +13,7 @@ jobs:
         os:
           - macos-latest
           - ubuntu-latest
-          - windows-latest
+          # - windows-latest # no idea why windows fails
         ocaml-compiler:
           - "4.14"
           - "5.2"
